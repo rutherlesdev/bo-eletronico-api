@@ -8,5 +8,4 @@ const db = connect();
 
 app.use(bodyParser());
 
-
-app.listen(3001);
+app.listen(3000);
