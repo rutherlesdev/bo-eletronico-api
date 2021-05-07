@@ -7,5 +7,7 @@ const app = express();
 const db = connect();
 
 app.use(bodyParser());
-
+app.get("/", (req, res) => {
+    res.json("Hello there");
+})
 app.listen(3000);
