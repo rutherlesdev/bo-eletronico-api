@@ -10,4 +10,4 @@ app.use(bodyParser());
 app.get("/", (req, res) => {
     res.json("Hello there");
 })
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
