@@ -36,7 +36,7 @@ export default {
 			res.status(200).json(categories);
 		} catch (err) {
 			return res.status(500).json({
-				error: errorHandler.getErrorMessage(err)
+				error: err
 			});
 		}
 	},
