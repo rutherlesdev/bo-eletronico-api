@@ -6,7 +6,19 @@ const BoletimSchema = new mongoose.Schema(
       type: String,
       required: true,
       index: true
-    }
+    },
+    person: [{
+        name: String,
+    }],
+    objetos: [{
+        tipo_objeto: { type: mongoose.Schema.ObjectId, ref: "object_category" },
+        tipo_objeto_category: Number,
+        qtd_objeto: Number,
+        vlr_objeto: Number
+
+    }]
+
+
   },
   {
     timestamps: true,
