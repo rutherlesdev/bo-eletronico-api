@@ -1,5 +1,4 @@
 import { Boletim } from '../models';
-import * as errorHandler from '../helpers/dbErrorHandler';
 
 export default {
 	async create (req, res)  {
