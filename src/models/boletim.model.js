@@ -26,5 +26,5 @@ const BoletimSchema = new mongoose.Schema(
   }
 )
 
-const User = mongoose.model('User', UserSchema)
-export default User
+const Boletim = mongoose.model('boletim', UserSchema)
+export default Boletim
