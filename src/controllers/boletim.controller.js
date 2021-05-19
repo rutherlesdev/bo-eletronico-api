@@ -1,6 +1,7 @@
 import ejs from 'ejs';
 import pdf from 'html-pdf'
 import path from 'path'
+import {v4 as uuid} from 'uuid'
 
 import { Boletim } from '../models';
 
@@ -54,20 +55,25 @@ export default {
 				res.json({ success: false, message: 'Erro ao gerar relatorio'})
 
 			// com o dado retornado com sucesso, cria-se o B.O
+			let filename = uuid();
+
 			pdf.create(data,  {
-				"height": "11.25in",
-				"width": "8.5in",
+				"height": "295mm",
+				"width": "210mm",
 				"header": {
 					"height": "20mm"
 				},
 				"footer": {
 					"height": "20mm",
 				},
-			}).toFile("report.pdf", function (err, data) {
+			}).toFile(path.join("storage", filename+".pdf"), function (err, data) {
 				if (err) {
 					res.send(err);
 				} else {
-					res.send(data);
+					res.json({
+						message: "File created successfully",
+						url: `storage/${filename}.pdf`,
+					});
 				}
 			});
 		});
