@@ -7,6 +7,11 @@ router
 	.get( BoletimController.getAll)
 	.post( BoletimController.create);
 
+	router
+		.route('/generateReport')
+		.get( BoletimController.generateReport)
+
+
 
 
 

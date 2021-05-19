@@ -1,3 +1,7 @@
+import ejs from 'ejs';
+import pdf from 'html-pdf'
+import path from 'path'
+
 import { Boletim } from '../models';
 
 export default {
@@ -38,6 +42,36 @@ export default {
 				error: err
 			});
 		}
+	},
+
+	async generateReport ( req, res ) {
+
+		let _boletim = await Boletim.findById(req.params._id);
+		console.log(__dirname)
+
+		ejs.renderFile(path.join(__dirname, '../views/', "report-template.ejs"), {}, (err, data) => {
+			if (err)
+				res.json({ success: false, message: 'Erro ao gerar relatorio'})
+
+			// com o dado retornado com sucesso, cria-se o B.O
+			pdf.create(data,  {
+				"height": "11.25in",
+				"width": "8.5in",
+				"header": {
+					"height": "20mm"
+				},
+				"footer": {
+					"height": "20mm",
+				},
+			}).toFile("report.pdf", function (err, data) {
+				if (err) {
+					res.send(err);
+				} else {
+					res.send(data);
+				}
+			});
+		});
+
 	},
 
 	async update (req, res)  {
