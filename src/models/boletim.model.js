@@ -7,6 +7,8 @@ const BoletimSchema = new mongoose.Schema(
       required: true,
       index: true
     },
+      descr_natureza: String,
+
     person: [{
         name: String,
     }],

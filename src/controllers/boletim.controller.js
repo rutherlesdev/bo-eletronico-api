@@ -48,9 +48,11 @@ export default {
 	async generateReport ( req, res ) {
 
 		let _boletim = await Boletim.findById(req.params._id);
-		console.log(__dirname)
 
-		ejs.renderFile(path.join(__dirname, '../views/', "report-template.ejs"), {}, (err, data) => {
+		ejs.renderFile(path.join(__dirname, '../views/', "report-template.ejs"), {}, {
+			cache: false
+
+		}, (err, data) => {
 			if (err)
 				res.json({ success: false, message: 'Erro ao gerar relatorio'})
 
@@ -58,13 +60,14 @@ export default {
 			let filename = uuid();
 
 			pdf.create(data,  {
-				"height": "295mm",
-				"width": "210mm",
-				"header": {
-					"height": "20mm"
+				scale: .1,
+				height: '210mm',
+				width: '450mm',
+				header: {
+					height: "10mm",
 				},
-				"footer": {
-					"height": "20mm",
+				footer: {
+					height: "8mm",
 				},
 			}).toFile(path.join("storage", filename+".pdf"), function (err, data) {
 				if (err) {
