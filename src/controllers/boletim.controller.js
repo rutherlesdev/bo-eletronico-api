@@ -22,11 +22,15 @@ export default {
 
 	async getById (req, res, next, id)  {
 		try {
-			let boletim = await Boletim.findById(id);
-			if (!boletim)
+			let data = await Boletim.findById(id);
+			if (!data)
 				return res.status('404').json({
 					error: 'Not found'
 				});
+
+			return res.status(200).json({
+				result: data
+			});
 		} catch (err) {
 			return res.status('400').json({
 				error: 'Could not retrieve user'
@@ -36,8 +40,19 @@ export default {
 
 	async getAll (req, res)  {
 		try {
-			let categories = await Boletim.find();
-			res.status(200).json(categories);
+			let data = await Boletim.find();
+			res.status(200).json({ result: data});
+		} catch (err) {
+			return res.status(500).json({
+				error: err
+			});
+		}
+	},
+
+	async getLatest (req, res)  {
+		try {
+			let data = await Boletim.find().limit(10);
+			res.status(200).json({ result: data});
 		} catch (err) {
 			return res.status(500).json({
 				error: err
