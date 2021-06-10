@@ -8,5 +8,6 @@ router
   .post(BoletimController.create)
 
 router.route('/generateReport').get(BoletimController.generateReport)
+router.route('/boletim/:id').get(BoletimController.getById)
 
 export default router
