@@ -54,6 +54,8 @@ export default {
       let data = await Boletim.find()
         .sort({ _id: -1 })
         .limit(10)
+        .exec()
+
       res.status(200).json({ result: data })
     } catch (err) {
       return res.status(500).json({
