@@ -1,18 +1,14 @@
-import express from "express";
-import {BoletimController} from "../controllers";
-const router = express.Router();
+import express from 'express'
+import { BoletimController } from '../controllers'
+const router = express.Router()
 
 router
-	.route('/boletim')
-	.get( BoletimController.getAll)
-	.post( BoletimController.create);
+  .route('/boletim')
+  .get(BoletimController.getLatest)
+  .post(BoletimController.create)
 
-	router
-		.route('/generateReport')
-		.get( BoletimController.generateReport)
+router.route('/generateReport').get(BoletimController.generateReport)
 
+router.route()
 
-
-
-
-export default router;
+export default router
