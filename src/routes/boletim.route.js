@@ -9,6 +9,4 @@ router
 
 router.route('/generateReport').get(BoletimController.generateReport)
 
-router.route()
-
 export default router
