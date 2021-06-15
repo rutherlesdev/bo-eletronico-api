@@ -20,9 +20,10 @@ export default {
     }
   },
 
-  async getById (req, res, next, id) {
+  async getById (req, res, next) {
     try {
-      let data = await Boletim.findById(id)
+      let data = await Boletim.findById(req.params.id);
+
       if (!data)
         return res.status('404').json({
           error: 'Not found'
@@ -65,7 +66,7 @@ export default {
   },
 
   async generateReport (req, res) {
-    let _boletim = await Boletim.findById(req.params._id)
+    let _boletim = await Boletim.findById(req.params.id)
 
     ejs.renderFile(
       path.join(__dirname, '../views/', 'report-template.ejs'),
