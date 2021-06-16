@@ -16,10 +16,8 @@ const BoletimSchema = new mongoose.Schema(
     hrregistro: String,
     dataFato: Date,
     descr_natureza: String,
-    person: [
-      {
-        name: String
-      }
+    pessoas: [
+      Mixed
     ],
     objetos: [
       {

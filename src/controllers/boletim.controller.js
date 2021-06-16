@@ -66,11 +66,12 @@ export default {
   },
 
   async generateReport (req, res) {
-    let _boletim = await Boletim.findById(req.params.id)
+    let _boletim = await Boletim
+                      .findById(req.params.id)
 
     ejs.renderFile(
       path.join(__dirname, '../views/', 'report-template.ejs'),
-      {},
+      {boletim: _boletim},
       {
         cache: false
       },
