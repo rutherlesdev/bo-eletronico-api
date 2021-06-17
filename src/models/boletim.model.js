@@ -17,8 +17,7 @@ const BoletimSchema = new mongoose.Schema(
     dataFato: Date,
     descr_natureza: String,
     pessoas: [
-      Mixed
-    ],
+{}    ],
     objetos: [
       {
         tipo_objeto: { type: mongoose.Schema.ObjectId, ref: 'object_category' },
