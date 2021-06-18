@@ -3,8 +3,8 @@ import pdf from 'html-pdf'
 import path from 'path'
 import { v4 as uuid } from 'uuid'
 import { cleanDirectory } from '../helpers/clean_dir'
-
 import { Boletim, ObjectCategory } from '../models'
+import moment from 'moment'
 
 export default {
   async create (req, res) {
@@ -75,13 +75,13 @@ export default {
     // Alimenta o template com os dados retornados
     ejs.renderFile(
       path.join(__dirname, '../views/', 'report-template.ejs'),
-      {boletim: _boletim},
+      { boletim: _boletim, moment: moment},
       {
         cache: false
       },
       (err, data) => {
         if (err)
-          res.json({ success: false, message: 'Erro ao gerar relatorio' })
+          res.json({ success: false, message: 'Erro ao gerar relatorio', message_details: err })
 
         // Com o template alimentado com sucesso, cria-se o pdf
         // a partir do template. Como o template nada mais é que um HTML
@@ -95,7 +95,7 @@ export default {
         // Limpamos todos os arquivos existentes atualmente na pasta
         // já que o pdf é gerado e retornado somente no ciclo de vida 
         // de uma requisição
-        cleanDirectory('storage')
+        cleanDirectory(path.join(__dirname, '..', '..', 'storage'))
 
         // Função para gerar o PDF
         pdf

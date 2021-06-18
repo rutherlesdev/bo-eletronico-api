@@ -633,7 +633,6 @@
 
         </th>
         <td class="s5">
-          <%= boletim.createdAt %>
         </td>
         <td class="s5" colspan="3"></td>
         <td class="s5"></td>
@@ -668,7 +667,7 @@
         >
 
         </th>
-        <td class="s7" colspan="5"></td>
+        <td class="s7" colspan="5"><%=boletim.tipoOcorr%> </td>
         <td class="s5" colspan="2"></td>
       </tr>
       <tr style="height: 12px">
@@ -695,8 +694,8 @@
         >
 
         </th>
-        <td class="s9">/ /</td>
-        <td class="s9" colspan="2"></td>
+        <td class="s9"><%= moment(boletim.createdAt).format('DD/MM/YYYY'); %></td>
+        <td class="s9" colspan="2"><%= moment(boletim.createdAt).format('HH:mm'); %></td>
         <td class="s10 softmerge">
           <div class="softmerge-inner" style="width: 119px; left: -1px">
             ( ) Autoria Desconhecida
@@ -765,7 +764,7 @@
         >
 
         </th>
-        <td class="s7" colspan="6"></td>
+        <td class="s7" colspan="6"><%=boletim.endereco%></td>
         <td class="s19"></td>
       </tr>
       <tr style="height: 12px">
@@ -837,10 +836,10 @@
 
         </th>
         <td class="s0" rowspan="6">Nº</td>
-        <% if (boletim.pessoas[0].tipo == 'Vitima') { %>
+        <% if (boletim.pessoas[0].tipo === "Vitima") { %>
           <td class="s21" rowspan="2">(X) VÍTIMA</td>
-          <%} else { %>
-            <td class="s21" rowspan="2">( ) VÍTIMA</td>
+        <%} else { %>
+            <td class="s21" rowspan="2">( wrwerw) VÍTIMA</td>
         <% } %>
         <td class="s21" rowspan="2">( ) IMPUTADO</td>
         <td class="s21" rowspan="2">( ) SUSPEITO</td>
@@ -1158,7 +1157,11 @@
         </th>
         <td class="s4 softmerge">
           <div class="softmerge-inner" style="width: 132px; left: -1px">
+            <% if(boletim.rg) { %>
+            ( X ) RG ( ) CNH
+            <% } else { %>
             ( ) RG ( ) CNH
+            <% } %>
           </div>
         </td>
         <td class="s6"></td>
@@ -1180,10 +1183,10 @@
         >
 
         </th>
-        <td class="s36" colspan="2"></td>
+        <td class="s36" colspan="2"><%=boletim.pessoas[0].rg%></td>
         <td class="s37"></td>
-        <td class="s9" colspan="2"></td>
-        <td class="s7" colspan="2"><%= boletim.pessoas[0].naturalidade %></td>
+        <td class="s9" colspan="2"><%=boletim.pessoas[0].cpf%></td>
+        <td class="s7" colspan="2"><%=boletim.pessoas[0].naturalidade%></td>
       </tr>
       <tr style="height: 12px">
         <th
@@ -1202,7 +1205,7 @@
         <td class="s18"></td>
         <td class="s12"></td>
         <td class="s8"></td>
-        <td class="s38">Númrero</td>
+        <td class="s38">Número</td>
         <td class="s38">Complemento</td>
       </tr>
       <tr style="height: 21px">
@@ -1730,7 +1733,7 @@
         <td class="s18"></td>
         <td class="s12"></td>
         <td class="s8"></td>
-        <td class="s38">Númrero</td>
+        <td class="s38">Número</td>
         <td class="s38">Complemento</td>
       </tr>
       <tr style="height: 28px">
