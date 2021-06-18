@@ -837,7 +837,11 @@
 
         </th>
         <td class="s0" rowspan="6">Nº</td>
-        <td class="s21" rowspan="2">( ) VÍTIMA</td>
+        <% if (boletim.pessoas[0].tipo == 'Vitima') { %>
+          <td class="s21" rowspan="2">(X) VÍTIMA</td>
+          <%} else { %>
+            <td class="s21" rowspan="2">( ) VÍTIMA</td>
+        <% } %>
         <td class="s21" rowspan="2">( ) IMPUTADO</td>
         <td class="s21" rowspan="2">( ) SUSPEITO</td>
         <td class="s21" rowspan="2">( ) TESTEMUNHA</td>
@@ -879,7 +883,9 @@
         >
 
         </th>
-        <td class="s25" colspan="7"></td>
+        <td class="s25" colspan="7">
+          <%= boletim.pessoas[0].nome %>
+        </td>
       </tr>
       <tr style="height: 12px">
         <th
@@ -905,7 +911,10 @@
         >
 
         </th>
-        <td class="s7" colspan="7"></td>
+        <td class="s7" colspan="7">
+          <%= boletim.pessoas[0].pai %>
+
+        </td>
       </tr>
       <tr style="height: 12px">
         <th
@@ -932,7 +941,10 @@
         >
 
         </th>
-        <td class="s25" colspan="7"></td>
+        <td class="s25" colspan="7">
+          <%= boletim.pessoas[0].mae %>
+
+        </td>
       </tr>
       <tr style="height: 20px">
         <th
@@ -1127,8 +1139,8 @@
         >
 
         </th>
-        <td class="s19"></td>
-        <td class="s28">( )</td>
+        <td class="s19"><%= boletim.pessoas[0].data_nascimento %></td>
+        <td class="s28">( <%= boletim.pessoas[0].idade_aparente %> )</td>
         <td class="s33 softmerge">
           <div class="softmerge-inner" style="width: 104px; left: -1px">
             3. Adolescente (13-17 anos)
@@ -1171,7 +1183,7 @@
         <td class="s36" colspan="2"></td>
         <td class="s37"></td>
         <td class="s9" colspan="2"></td>
-        <td class="s7" colspan="2"></td>
+        <td class="s7" colspan="2"><%= boletim.pessoas[0].naturalidade %></td>
       </tr>
       <tr style="height: 12px">
         <th
@@ -1201,9 +1213,9 @@
         >
 
         </th>
-        <td class="s25" colspan="5"></td>
-        <td class="s19"></td>
-        <td class="s19"></td>
+        <td class="s25" colspan="5"> <%= boletim.pessoas[0].endereco %></td>
+        <td class="s19"><%= boletim.pessoas[0].endereco_numero %></td>
+        <td class="s19"><%= boletim.pessoas[0].endereco_complemento %></td>
       </tr>
       <tr style="height: 20px">
         <th

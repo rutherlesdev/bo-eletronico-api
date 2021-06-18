@@ -2,8 +2,9 @@ import ejs from 'ejs'
 import pdf from 'html-pdf'
 import path from 'path'
 import { v4 as uuid } from 'uuid'
+import { cleanDirectory } from '../helpers/clean_dir'
 
-import { Boletim } from '../models'
+import { Boletim, ObjectCategory } from '../models'
 
 export default {
   async create (req, res) {
@@ -66,9 +67,12 @@ export default {
   },
 
   async generateReport (req, res) {
+    // Faz pesquisa no banco de dados para
+    // retornar o boletim com o id específico
     let _boletim = await Boletim
                       .findById(req.params.id)
 
+    // Alimenta o template com os dados retornados
     ejs.renderFile(
       path.join(__dirname, '../views/', 'report-template.ejs'),
       {boletim: _boletim},
@@ -79,9 +83,21 @@ export default {
         if (err)
           res.json({ success: false, message: 'Erro ao gerar relatorio' })
 
-        // com o dado retornado com sucesso, cria-se o B.O
-        let filename = uuid()
+        // Com o template alimentado com sucesso, cria-se o pdf
+        // a partir do template. Como o template nada mais é que um HTML
+        // especial, utilizados um conversor de html para pdf do Node
+  
+        
+        // Utilizado para gerar um valor aleatório o qual servirá 
+        // de nome do arquivo temporário
+        let filename = uuid()      
 
+        // Limpamos todos os arquivos existentes atualmente na pasta
+        // já que o pdf é gerado e retornado somente no ciclo de vida 
+        // de uma requisição
+        cleanDirectory('storage')
+
+        // Função para gerar o PDF
         pdf
           .create(data, {
             scale: 0.1,
@@ -101,6 +117,7 @@ export default {
             if (err) {
               res.send(err)
             } else {
+              
               res.json({
                 message: 'File created successfully',
                 url: `storage/${filename}.pdf`

@@ -17,7 +17,17 @@ const BoletimSchema = new mongoose.Schema(
     dataFato: Date,
     descr_natureza: String,
     pessoas: [
-{}    ],
+    {
+        pai: String,
+        mae: String,
+        data_nascimento: String,
+        idade_aparente: String,
+        escolaridade: String,
+        endereco: String,
+        endereco_numero: String,
+        endereco_complemeneto: String,
+    } 
+   ],
     objetos: [
       {
         tipo_objeto: { type: mongoose.Schema.ObjectId, ref: 'object_category' },
@@ -29,7 +39,7 @@ const BoletimSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-    strict: false //values added to our model instance that were not specified
+    strict: false // Novos conteúdos além dos que aqui especificados poderão ser adicionados
   }
 )
 
