@@ -52,7 +52,7 @@ const BoletimSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-    strict: true // Novos conteúdos além dos que aqui especificados poderão ser adicionados
+    strict: false // Novos conteúdos além dos que aqui especificados poderão ser adicionados
   }
 )
 
