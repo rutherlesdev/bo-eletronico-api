@@ -11,11 +11,14 @@ const BoletimSchema = new mongoose.Schema(
       index: true
     },
     responsavel: String,
+    tipoOcorr: String,
     endereco: String,
     date: Date,
     hrregistro: String,
     dataFato: Date,
     descr_natureza: String,
+    gt: { type: String, default: "" },
+    efetivo: { type: String, default: "" },
     pessoas: [
     {
         pai: String,
@@ -26,20 +29,30 @@ const BoletimSchema = new mongoose.Schema(
         endereco: String,
         endereco_numero: String,
         endereco_complemeneto: String,
-    } 
+        naturalidade: { type: String, default: "" },
+        rg: { type: String, default: "" },
+        cpf: { type: String, default: "" },
+        telefone: { type: String, default: "" },
+        tipo: { type: String, default: "" },
+      },
+    
    ],
     objetos: [
       {
         tipo_objeto: { type: mongoose.Schema.ObjectId, ref: 'object_category' },
-        tipo_objeto_category: Number,
-        qtd_objeto: Number,
-        vlr_objeto: Number
+        tipo_objeto_category: String,
+        qtd_objeto: String,
+        vlr_objeto: String,
+        envolvido: { type: String, default: "" },
+        modelo: { type: String, default: "" },
+        nserie: { type: String, default: "" },
+        histórico: { type: String, default: "" },
       }
     ]
   },
   {
     timestamps: true,
-    strict: false // Novos conteúdos além dos que aqui especificados poderão ser adicionados
+    strict: true // Novos conteúdos além dos que aqui especificados poderão ser adicionados
   }
 )
 
