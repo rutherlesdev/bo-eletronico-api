@@ -1,0 +1,946 @@
+<% if (boletim.objetos.length> 5 || boletim.veiculo.length > 4) { %>
+  <%# objeto 4 a 6 %>
+    <br></br>
+    <br></br>
+    <div class="ritz grid-container page2" dir="ltr">
+
+      <table class="waffle no-grid table2" cellspacing="0" cellpadding="0">
+  
+        <thead>
+  
+        </thead>
+        <tbody>
+          <tr style="height: 12px">
+            <th id="851099115R0" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+  
+            <td style="writing-mode: vertical-lr; border-top: 2px solid black; " class="rotate  borderLeft" colspan="2"
+              rowspan="2">
+               
+            </td>
+            <td class="s01 borderTop">Unidade Operacional</td>
+            <td class="s02 borderTop">Circunscrição</td>
+            <td class="s02 borderTop"></td>
+            <td class="s03 borderTop"></td>
+            <td class="s01 borderTop">Data ou Registro</td>
+            <td class="s01 borderTop">Hora do Registro</td>
+            <td class="s04 softmerge borderTop borderRigth">
+              <div class="softmerge-inner ">
+                Nº da Folha
+  
+              </div>
+            </td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R1" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05"> 2BIEsp</td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              colspan="3"> AIS 26</td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05">
+              <%= moment(boletim.createdAt).format('DD/MM/YYYY'); %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05">
+  
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s5">
+              <%= %>
+            </td>
+          </tr>
+          <tr style="height: 11px">
+            <th id="851099115R2" style="height: 11px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 11px"></div>
+            </th>
+  
+            
+            <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"  colspan="2"
+              rowspan="8">
+  
+  
+              <div class=" vertical" style=" font-size: 10px; margin-left: 30px;  padding-bottom: 68px;  "></div>
+            </td>
+            <td class="s02">Forma de Aproximação</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 236px; left: -1px">
+                Forma da ação da abordagem
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R3" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td class="s010" colspan="3"></td>
+            <td class="s010" colspan="4"></td>
+          </tr>
+          <tr style="height: 11px">
+            <th id="851099115R4" style="height: 11px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 11px"></div>
+            </th>
+            <td class="s02">Local de Entrada ?</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+            <td class="s02">Forma de Entrada ?</td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R5" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td class="s010" colspan="3"></td>
+            <td class="s010" colspan="4"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R6" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s02">Alterações no local ?</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+            <td class="s02">Forma de Evasão ?</td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R7" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td class="s010" colspan="3"></td>
+            <td class="s010" colspan="4"></td>
+          </tr>
+          <tr style="height: 11px">
+            <th id="851099115R8" style="height: 11px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 11px"></div>
+            </th>
+            <td class="s02">Crimes Sexuais ?</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+            <td class="s02">Estelionato ?</td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R9" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td class="s010" colspan="3"></td>
+            <td class="s010" colspan="4"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R10" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+  
+  
+            <%# inicio do objeto %>
+  
+              <%# objeto1 %>
+  
+              <td style="writing-mode: vertical-rl;  font-size: 8pt; border-left: 2px solid black; border-bottom: 2px solid black; border-top: 2px solid black; border-right: 2px solid black;"
+              rowspan="18">
+  
+  
+              <div class=" vertical" style=" align-items: center; align-self: center;  font-size: 12px; padding-left: 90px; padding-bottom: 68px;  ">Objeto</div>
+            </td>
+  
+               
+  
+  
+  
+                <td style="writing-mode: vertical-lr; text-align: center;" class="s012" dir="ltr" rowspan="6">Nº
+                </td>
+                <td class="s01">Envolvido</td>
+                <td class="s02">Tipo de Objeto</td>
+                <td class="s08"></td>
+                <td class="s02">Marca / Modelo</td>
+                <td class="s08"></td>
+                <td class="s02">Número de série</td>
+                <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R11" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"> </div>
+            </th>
+  
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s013" dir="ltr">
+              <%= boletim.objetos.length > 6 ?  boletim.objetos[7].envolvido : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" dir="ltr" colspan="2">
+              <%= boletim.objetos.length > 6 ?  boletim.objetos[7].tipo : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" dir="ltr" colspan="2">
+              <%= boletim.objetos.length > 6 ?  boletim.objetos[7].modelo : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              dir="ltr" colspan="2">
+              <%= boletim.objetos.length > 6 ?  boletim.objetos[7].nserie : '------' %>
+            </td>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R12" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s01">Quantidade</td>
+            <td class="s02">Valor</td>
+            <td class="s08"></td>
+            <td class="s07">Moeda</td>
+            <td class="s08"></td>
+            <td class="s02">Objeto Apreendido</td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R13" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              dir="ltr">
+              <%= boletim.objetos.length > 6 ?  boletim.objetos[7].qtd_objeto : '------' %>
+            </td>
+            <td class="s05" colspan="2"></td>
+            <td class="s014"></td>
+            <td class="s015"></td>
+            <td class="s016" dir="ltr">( ) Sim</td>
+            <td class="s017">( ) Não</td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R14" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 232px; left: -1px">
+                Qual o motivo do registro do objeto ?
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td style="text-align: left;" class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R15" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018" dir="ltr" colspan="7">
+              <%= boletim.objetos.length > 6 ?  boletim.objetos[7].motivo : '------' %>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R16" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+  
+  
+            <%# objeto 2 %>
+  
+  
+  
+              <td style="writing-mode: vertical-lr; text-align: center;" class="s012" rowspan="6">Nº</td>
+              <td class="s01">Envolvido</td>
+              <td class="s02">Tipo de Objeto</td>
+              <td class="s08"></td>
+              <td class="s02">Marca / Modelo</td>
+              <td class="s08"></td>
+              <td class="s02">Número de série</td>
+              <td class="s08"></td>
+          </tr>
+          <tr style="height: 24px">
+            <th id="851099115R17" style="height: 24px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 24px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s013" dir="ltr">
+              <%= boletim.objetos.length> 7 ? boletim.objetos[7].envolvido : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" dir="ltr" colspan="2">
+              <%= boletim.objetos.length> 7 ? boletim.objetos[7].tipo : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" dir="ltr" colspan="2">
+              <%= boletim.objetos.length> 7 ? boletim.objetos[7].modelo :'------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              dir="ltr" colspan="2">
+              <%= boletim.objetos.length> 7 ? boletim.objetos[7].nserie : '------' %>
+            </td>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R18" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s01">Quantidade</td>
+            <td class="s02">Valor</td>
+            <td class="s08"></td>
+            <td class="s07">Moeda</td>
+            <td class="s08"></td>
+            <td class="s02">Objeto Apreendido</td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 23px">
+            <th id="851099115R19" style="height: 23px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 23px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s019">
+  
+              <%= boletim.objetos.length> 7 ? boletim.objetos[7].qtd_objeto : '------' %>
+  
+            </td>
+            <td class="s05" colspan="2"></td>
+            <td class="s020"></td>
+            <td class="s015"></td>
+            <td class="s016">( ) Sim</td>
+            <td class="s017">( ) Não</td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R20" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 232px; left: -1px">
+                Qual o motivo do registro do objeto ?
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td style="text-align: left;" class="s08"></td>
+          </tr>
+          <tr style="height: 25px">
+            <th id="851099115R21" style="height: 25px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 25px"></div>
+            </th>
+  
+  
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018" dir="ltr" colspan="7">
+              <%= boletim.objetos.length> 7 ? boletim.objetos[7].motivo : '------' %>
+            </td>
+  
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R22" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+  
+  
+  
+            <%# objeto 2 %>
+  
+  
+              <td style="writing-mode: vertical-lr; text-align: center;" class="s012" rowspan="6">Nº</td>
+              <td class="s01">Envolvido</td>
+              <td class="s02">Tipo de Objeto</td>
+              <td class="s08"></td>
+              <td class="s02">Marca / Modelo</td>
+              <td class="s08"></td>
+              <td class="s02">Número de série</td>
+              <td class="s08"></td>
+          </tr>
+          <tr style="height: 24px">
+            <th id="851099115R23" style="height: 24px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 24px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s013" dir="ltr">
+              <%= boletim.objetos.length> 8 ? boletim.objetos[7].envolvido : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" dir="ltr" colspan="2">
+              <%= boletim.objetos.length> 8 ? boletim.objetos[7].tipo : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" dir="ltr" colspan="2">
+              <%= boletim.objetos.length> 8 ? boletim.objetos[7].modelo :'------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              dir="ltr" colspan="2">
+              <%= boletim.objetos.length> 8 ? boletim.objetos[7].nserie : '------' %>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R24" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s01">Quantidade</td>
+            <td class="s02">Valor</td>
+            <td class="s08"></td>
+            <td class="s07">Moeda</td>
+            <td class="s08"></td>
+            <td class="s02">Objeto Apreendido</td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 24px">
+            <th id="851099115R25" style="height: 24px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 24px"></div>
+            </th>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s019">
+  
+  
+  
+              <%= boletim.objetos.length> 8 ? boletim.objetos[7].qtd_objeto : '------' %>
+  
+            </td>
+  
+            </td>
+            <td class="s05" colspan="2"></td>
+            <td class="s020"></td>
+            <td class="s015"></td>
+            <td class="s016">( ) Sim</td>
+            <td class="s017">( ) Não</td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R26" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 232px; left: -1px">
+                Qual o motivo do registro do objeto ?
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 23px">
+            <th id="851099115R27" style="height: 23px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 23px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018" dir="ltr" colspan="7">
+              <%= boletim.objetos.length> 8 ? boletim.objetos[7].motivo : '------' %>
+            </td>
+          </tr>
+          <tr style="height: 15px">
+            <th id="851099115R28" style="height: 15px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 15px"></div>
+            </th>
+            <td style="writing-mode: vertical-rl; font-size: 8pt;" class="rotate s021 borderLeft" rowspan="12">
+              
+            </td>
+  
+  
+  
+            <%# veiculo 1 %>
+  
+  
+  
+              <td class="s012" style="writing-mode: vertical-lr; text-align: center;" rowspan="6">Nº</td>
+              <td class="s01">Envolvido</td>
+              <td class="s02">Marca / Modelo</td>
+              <td class="s08"></td>
+              <td class="s03">Cor</td>
+              <td class="s03">Ano</td>
+              <td class="s02">Renavam</td>
+              <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R29" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05">
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018" colspan="2">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].marca : '------' %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].cor : '------' %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].ano : '------' %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s019" colspan="2">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].renavam : '------' %>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R30" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s01">UF</td>
+            <td class="s02">Chassi</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+            <td class="s03">Placa</td>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 201px; left: -1px">
+                Veículo apreendido
+              </div>
+            </td>
+            <td class="s09 borderRigth"></td>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R31" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s013">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].uf : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              colspan="3">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].chassi: '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s015">
+              <%= boletim.veiculo.length> 4 ? boletim.veiculo[4].placa : '------' %>
+            </td>
+            <td class="s016">( ) Sim</td>
+            <td class="s017">( ) Não</td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R32" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 232px; left: -1px">
+                Qual o motivo do registro do veículo ?
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R33" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td class="s010" colspan="7"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R34" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+  
+  
+  
+            <%# veiculo 2 %>
+  
+  
+  
+              <td style="writing-mode: vertical-lr; text-align: center;" class="s012" rowspan="6">Nº</td>
+              <td class="s01">Envolvido</td>
+              <td class="s02">Marca / Modelo</td>
+              <td class="s08"></td>
+              <td class="s03">Cor</td>
+              <td class="s03">Ano</td>
+              <td class="s02">Renavam</td>
+              <td class="s08"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R35" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05">
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018" colspan="2">
+              <%= boletim.veiculo.length> 5 ? boletim.veiculo[5].marca : '------' %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018">
+              <%= boletim.veiculo.length> 5 ? boletim.veiculo[5].cor : '------' %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s05">
+              <%= boletim.veiculo.length> 5 ? boletim.veiculo[5].ano : '------' %>
+            </td>
+            <td
+              style="font-size: 14; text-align: center; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s019" colspan="2">
+              <%= boletim.veiculo.length> 5 ? boletim.veiculo[5].renavam : '------' %>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R36" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s01">UF</td>
+            <td class="s02">Chassi</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+            <td class="s03">Placa</td>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 201px; left: -1px">
+                Veículo apreendido
+              </div>
+            </td>
+            <td class="s09"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R37" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+  
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s013">
+              <%= boletim.veiculo.length> 5 ? boletim.veiculo[5].uf : '------' %>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010" <%=boletim.veiculo.length> 5 ? boletim.veiculo[5].chassi: '------' %>
+              colspan="3"></td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s022">
+              <%= boletim.veiculo.length> 5 ? boletim.veiculo[5].placa : '------' %>
+            </td>
+            </td>
+            <td class="s016">( ) Sim</td>
+            <td class="s017">( ) Não</td>
+  
+  
+  
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R38" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 232px; left: -1px">
+                Qual o motivo do registro do veículo ?
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R39" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s05" colspan="7"></td>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R40" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+            <td style="writing-mode: vertical-lr;" class="rotate s06 borderLeft" rowspan="12"> </td>
+            <td
+              style="font-size: 11; text-align: left;  font-family:  'Trebuchet MS', sans-serif; "
+              class="s023" colspan="8" rowspan="12">
+  
+              <%# histórico %>
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            </td>
+          <tr style="height: 20px">
+            <th id="851099115R41" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R42" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R43" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R44" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R45" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R46" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R47" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R48" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R49" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R50" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 20px">
+            <th id="851099115R51" style="height: 20px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 20px"></div>
+            </th>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R52" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s08 borderLeft"></td>
+            <td class="s024 softmerge">
+              <div class="softmerge-inner" style="width: 252px; left: -1px">
+                Exames Periciais: S. Solicitado R. Realizado
+              </div>
+            </td>
+            <td class="s025"></td>
+            <td class="s026"></td>
+            <td class="s026"></td>
+            <td class="s020"></td>
+            <td class="s020"></td>
+            <td class="s020"></td>
+            <td class="s015"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R53" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s08 borderLeft"></td>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 126px; left: -1px">
+                Tipo do Exame
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s027 softmerge">
+              <div class="softmerge-inner" style="width: 123px; left: -1px">
+                Envolvido ( ) S
+              </div>
+            </td>
+            <td class="s02">Tipo do Exame</td>
+            <td class="s07"></td>
+            <td class="s03 softmerge">
+              <div class="softmerge-inner" style="width: 113px; left: -1px">
+                Envolvido ( ) S
+              </div>
+            </td>
+            <td class="s07">Tipo do Exame</td>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 208px; left: -1px">
+                Envolvido ( ) S
+              </div>
+            </td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R54" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td class="s015 borderLeft"></td>
+            <td class="s028" colspan="2"></td>
+            <td class="s017 softmerge">
+              <div class="softmerge-inner" style="width: 123px; left: -1px">
+                ( ) ( ) R
+              </div>
+            </td>
+            <td class="s028" colspan="2"></td>
+            <td class="s024 softmerge">
+              <div class="softmerge-inner" style="width: 201px; left: -1px">
+                ( ) ( ) R
+              </div>
+            </td>
+            <td class="s026"></td>
+            <td class="s029 softmerge ">
+              <div class="softmerge-inner ">
+                ( ) ( ) R
+              </div>
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R55" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td style="writing-mode: vertical-lr;" class="rotate s030 borderLeft" rowspan="9"></td>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 126px; left: -1px">
+                ( ) Condutor
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s02">( ) Recebedor</td>
+            <td class="s08"></td>
+            <td class="s03">Matrícula</td>
+            <td class="s03">Viatura</td>
+            <td class="s03">Unidade</td>
+          </tr>
+          <tr style="height: 21px">
+            <th id="851099115R56" style="height: 21px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 21px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s019" colspan="3">
+              <%= boletim.responsavel%>
+            </td>
+            <td class="s019" colspan="2"></td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s018">
+              <%= boletim.matricula%>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010">
+              <%= boletim.gt%>
+            </td>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; "
+              class="s010">2BIEsp
+            </td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R57" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s031 softmerge">
+              <div class="softmerge-inner" style="width: 252px; left: -1px">
+                Responsável pelo preenchimento
+              </div>
+            </td>
+            <td class="s032"></td>
+            <td class="s033"></td>
+            <td class="s034">Interessado</td>
+            <td class="s035"></td>
+            <td class="s036">Respnsável pela validação</td>
+            <td class="s036"></td>
+            <td class="s035"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R58" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 126px; left: -1px">
+                Matrícula:
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s02"></td>
+            <td class="s08"></td>
+            <td class="s02">Matrícula:</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 25px">
+            <th id="851099115R59" style="height: 25px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 25px"></div>
+            </th>
+            <td style="font-size: 14; font-weight: bold; font-family:  'Trebuchet MS', sans-serif; " class="s05"
+              colspan="3">
+              <%= boletim.matricula%>
+            </td>
+            <td class="s013" colspan="2"></td>
+            <td class="s05" colspan="3"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R60" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 126px; left: -1px">
+                Assinatura:
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s02">Assinatura:</td>
+            <td class="s08"></td>
+            <td class="s02">Assinatura:</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 31px">
+            <th id="851099115R61" style="height: 31px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 31px"></div>
+            </th>
+            <td class="s05" colspan="3"></td>
+            <td class="s020"></td>
+            <td class="s015"></td>
+            <td class="s020"></td>
+            <td class="s020"></td>
+            <td class="s015"></td>
+          </tr>
+          <tr style="height: 12px">
+            <th id="851099115R62" style="height: 12px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 12px"></div>
+            </th>
+            <td class="s04 softmerge">
+              <div class="softmerge-inner" style="width: 126px; left: -1px">
+                Nome:
+              </div>
+            </td>
+            <td class="s09"></td>
+            <td class="s09"></td>
+            <td class="s02">Nome:</td>
+            <td class="s08"></td>
+            <td class="s02">Nome:</td>
+            <td class="s07"></td>
+            <td class="s08"></td>
+          </tr>
+          <tr style="height: 32px">
+            <th id="851099115R63" style="height: 32px" class="row-headers-background">
+              <div class="row-header-wrapper" style="line-height: 32px"></div>
+            </th>
+            <td class="s018" colspan="3"></td>
+            <td class="s010" colspan="2"></td>
+            <td class="s010" colspan="3"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <% } else { %>
+      <div></div>
+      <% } %>

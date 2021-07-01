@@ -1,0 +1,2 @@
+verificar a numeração dapessoa
+<div class="vertical"> <%=  pessoas.length> 0 ?  'Nº 1' : 'Nº' %> </div> 
